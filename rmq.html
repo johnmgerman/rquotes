@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<!--<html>
+    <head>
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Hello World</title>
+    </head>
+    <body>
+        <div class="app">
+            <h1>Apache Cordova</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
+-->
+
+<!--
+signing the application:
+http://developer.android.com/tools/publishing/app-signing.html
+
+youtube oembed:
+http://www.youtube.com/oembed?url=http%3A//www.youtube.com/watch?v%3D-UUx10KOWIE&format=xml
+
+
+https://infinityfree.net/
+https://www.freehostia.com/free-cloud-hosting/
+
+http://www.dot.tk/
+
+http://5freehosting.com/index.php?_url=/order/service/manage/2510
+-->
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Cache-Control" content="no-cache" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="-1" />
+        <meta name="description" content="Random Quotes">
+        <meta name="keywords" content="Random Quotes, Movies, TV, Comic, Stage Play, Books.">
+        <meta name="author" content="John German">
+        <title>Random Quotes</title>
+
+        <script src="js/jquery-1.11.2.min.js"></script>
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="css/colors_final.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+
+        <style>
+            .container {  position: relative; }
+
+            .container:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 1;
+                background: url('../logo.gif') no-repeat center;
+                opacity: 0.1;
+            }
+
+            .content {
+                position: relative; 
+                z-index: 2;
+            }​
+        </style>
+	</head>
+
+	<body>
+		<div data-role="page" data-cache="never" id="welcome">
+			<div data-role="header" data-theme="a" id="mainheader">
+				<h1>Random Quotes</h1>
+				<!--<h1><img src="logo.gif" /></h1>-->
+				<a href="#popupMenu" data-rel="popup" data-ransition="slide" class="ul-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-bars ui-btn-icon-right ui-btn-a">Main Menu</a>
+			</div>
+			<div data-role="popup" id="popupMenu" data-theme="a">
+				<ul data-role="listview" data-inset="true">
+					<li><a href="#welcome" data-icon="home">Home</a></li>
+					<li><a href="#search" data-icon="search">Search</a></li>
+					<li><a href="#stats" data-icon="info">App Stats</a></li>
+					<li><a href="#settings" data-icon="info">Settings</a></li>
+					<li><a href="#contact" data-icon="info">Contact</a></li>
+				</ul>
+			</div>
+			<div data-role="main" class="ui-content" style="text-align:center" id="welcome_main">
+                <div class="container">
+                    <div class="content">
+                       <p>
+                           <span id="whats_showing"></span>
+				           <span id="movie_quote">"I coulda had class.  I coulda been a contender.  I coulda been somebody, instead of a bum, which is what I am, let's face it."<br />
+				           On the Waterfront - 1954 - Terry Malloy (Marlon Brando)<br /><br /></span>
+				           <span id="get_another_quote"><a href="#" id="refresh_quote">Swipe Left or Click Here For Another Quote</a><br /></span>
+				           <iframe width="225" height="200" id="movie_iframe" src="" frameborder="0" allowfullscreen></iframe>
+				        </p>
+								<a href="#disclaimer">***Disclaimer***</a><br /><br />
+                        <div>
+                            <span class="smallScreen" id="ad_1"></span> <span class="smallScreen" id="ad_2"></span> <span class="smallScreen" id="ad_3"></span>
+                        </div>
+							<div>
+<br /><br />				<a href="http://php.net" target="_blank"><img src="php-power-white.png" border="0" alt="php.net"></a>
+							</div>
+                        </div>
+                    </div>
+			 </div>
+			 <div data-role="footer" data-theme="a" style="text-align:center;">
+				<a href="#about">About</a> | <!--<a href="https://www.stage32.com/johngerman"  target="_blank" style="text-decoration:none;"><iframe id="stage32-profile-button" src="https://www.stage32.com/b/32.php?uid=363739" scrolling="no" frameborder="0" allowtransparency="true" align="center" height="30" width="175" style="padding-left: 20px;width: 175px; height: 32px;" title="Stage 32 Profile Button"></iframe></a>--><a href="https://www.stage32.com/johngerman">Stage32 - John German</a> | <a href="https://freehosting.host" target="_blank"><img src="https://freehosting.host/wp-content/uploads/2016/09/logo.png" alt="freehosting.host" /></a> | <a target="_blank" href="https://www.linkedin.com/pub/john-german/89/914/670"><img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" width="160" height="30" border="0" alt="View John German's profile on LinkedIn"></a> | <a href="#contact">Contact</a>
+				<br />
+Random Quotes
+				<br />
+			 </div>
+			<div data-role="panel" id="about">
+				<h2>About</h2>
+				<p>
+					The Random Quotes App is a very simple application, obviously.  It randomly displays quotes along with title, actor, character name and the year.  It will also display an embedded youtube clip if one is associated to the given quote.
+					<p></p>
+					I think most can, in some way or another, agree that movies helped take us away from life at times.
+					Movies can take us away from whatever life brings to immerse ourselves into a different world.  A different story.  A different character.
+					Sometimes, without even knowing they do so.  So get lost again, even if only briefly.
+				</p>
+			</div>
+			<div data-role="panel" id="disclaimer">
+				<h2>Disclaimer</h2>
+				<p>
+				All youtube videos are coming from the public facing website www.Youtube.com;  These are brief clips that contain the quotes, and rquotes.tk will only link to videos that are a brief segment of a full-length source, and never the actual full-length source.  All of the links are from users who opted to have their videos be sharable.  http://rquotes.tk is not connected to the content within the video other than sharing a link back to the public video posted by various users on www.Youtube.com.
+				
+				<br /><br>
+					All of the quotes within this application are not owned by rquotes.tk;  These are quotes from books, comics, movies, stage plays, etc., and
+					are only displayed for entertainment.  All of the quotes are from published works, in example, movies, T.V shows, etc.  Rquotes.tk would never, and will never publish any type of quote that hasn't been fully published within the entire written work.
+				</p>
+			</div>
+		</div>
+
+		<div data-role="page" data-cache="never" data-dialog="true" id="contact">
+			<div data-role="header" data-theme="a">
+				<h1>Contact</h1>
+			</div>
+			
+			<div data-role="main" class="ui-content" id="contact_main">
+                <div class="container">
+                    <div class="content">
+				        Any questions, comments and/or concerns please e-mail <a href="mailto:webmaster@rquotes.tk">webmaster@rquotes.tk</a>.
+				        <br/><br/>Also, if you know other quotes and/or clips you would like added, send those,
+				        along with youtube clips if applicable.  
+				        <p></p>
+				        What will you receive for any help?  To quote Caddyshack:<br />
+				        "You'll get nothing and like it!".<br/>
+				        <iframe width="200" height="200" id="movie_iframe_contact" src="https://www.youtube.com/embed/0f6l1QljpMo" frameborder="0" allowfullscreen></iframe>
+			        </div>
+                </div>
+              </div>
+		</div>
+
+		<div data-role="page" data-cache="never" data-dialog="true" id="search">
+			<div data-role="header">
+				<h1>Search</h1>
+			</div>
+
+			<div data-role="main" class="ui-content" id="search_main">
+                <div class="container">
+                    <div class="content">
+				    <form method="post" action="#">
+					    <fieldset class="ui-field-contain">
+						    <table width="100%">
+							    <tr>
+								    <td>
+									    <label for="searchby">Search By:</label>
+								    </td>
+								    <td>
+									    <select name="searchby" id="searchby">
+										    <option value="1">Movie Name</option>
+										    <option value="2">Quote</option>
+										    <option value="3">Movie Character Name</option>
+										    <option value="4">Actor</option>
+										    <option value="5">Year</option>
+									    </select>
+								    </td>
+							    </tr>
+							    <tr>
+								    <td>
+									    <label for="searchtext">Search Text:</label>
+								    </td>
+								    <td>
+									    <input type="text" name="searchtext" id="searchtext" />
+								    </td>
+							    </tr>
+							    <tr>
+								    <td colspan="2" align="Center">
+									    <input type="button" name="search_button" id="search_button" value="Search" />
+								    </td>
+							    </tr>
+						    </table>
+					    </fieldset>
+				    </form>
+				    <span id="search_results"></span>
+                </div>
+              </div>
+			</div>
+		</div>
+
+		<div data-role="page" data-cache="never" data-dialog="true" id="stats">
+			<div data-role="header">
+				<h1>App Stats</h1>
+			</div>
+
+			<div data-role="main" id="stats_main" class="ui-content weroua">
+                <div class="container">
+                    <div class="content">
+                        <div id="stats_asdfj"></div>
+                    </div>
+                </div>
+			</div>
+		</div>
+
+		<div data-role="page" data-dialog="true" id="settings">
+			<div data-role="header">
+				<h1>Display Settings</h1>
+			</div>
+
+			<div data-role="main" id="settings_main" class="ui-content weroua">
+                <div class="container">
+                    <div class="content">
+				        <form method="post" action="#" id="settings_form" name="settings_form">
+					        <fieldset>
+						        <span id="settings_message"></span>
+						        <label for="settings_video">Quotes with videos only</label>
+						        <input type="checkbox" name="settings_video" id="settings_video">
+						        <label for="settings_quotesfor">Display quotes for:</label>
+						        <span id="settings_quotesfor"></span>
+						        <label for="settings_decades">Display quotes for these decades:</label>
+						        <span id="settings_decades"></span>
+						        <input type="button" id="settings_button" name="settings_button" value="Save" />
+					        </fieldset>
+				        </form>
+                     </div>
+                </div>
+			</div>
+		</div>
+	</body>
+</html>
+
+<script src="js/SheFartsInHerSleep.js"></script>
+
+<!--
+
+An 1878 experiment by Eadweard Muybridge in the United States using 24 cameras produced a series of stereoscopic images of a galloping horse, arguably the first "motion picture," though it was not called by this name at the time. 
+
+First Home Movie Ever Made - Roundhay Garden Scene (1888) 
+
+The Roundhay Garden Scene is thought to be the oldest surviving film on record. It was directed by the French inventor, Louis Le Prince and features some members of Le Prince's family playfully walking around a garden. The film lasts about two seconds. 
+
+First Movie Ever Shot (U.S.A.) - Monkeyshines No. 1 (1889 or 1890) 
+
+"Monkeyshines, No. 1" may very well be the first movie ever shot using a continuous strip of film. It was shot as a camera test by W.K.L. Dickson and William Heise, both of whom worked for Thomas Edison. Historians are 
+unsure of the exact date this film was shot as it was filmed to be a camera test and not for commercial purposes. 
+
+The First Copyrighted Movie Ever Made - Fred Ott's Sneeze (1893-4) 
+
+This title goes to "Fred Ott's Sneeze", which reportedly was the first movie ever made at Thomas Edison's Black Maria rooftop studio. The actual name of this movie is Record of a Sneeze, which was made in late 1893 and copyrighted on January 7, 1894. 
+
+First Movie Ever Made for Projection -- Workers Leaving the Lumiere Factory (1895) 
+
+The Lumiere Brothers held a private screening of projected movies on March 22, 1895. This test screening was a success. The Lumiere's then held their first paid, public screening of movies on December 28, 1895 in the basement the Salon Indien du Grand Café in Paris.
+
+http://en.wikipedia.org/wiki/Film
+
+-->
